@@ -1,5 +1,6 @@
 .sidebar {
     flex: 0.35;
+    background-color: #fff;
 }
 
 .sidebar__header {
@@ -48,8 +49,4 @@
 
 .sidebar__searchContainer > input:focus {
     outline: none;
-}
-
-.sidebar__chats {
-    background-color: #fff;
 }

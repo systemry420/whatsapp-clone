@@ -4,6 +4,8 @@ import { Avatar, IconButton } from "@material-ui/core"
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import { SearchOutlined } from "@material-ui/icons"
 import AttachFileIcon from '@material-ui/icons/AttachFile';
+import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon"
+import MicIcon from "@material-ui/icons/Mic"
 
 
 function Chat() {
@@ -13,6 +15,10 @@ function Chat() {
         setSeed(Math.floor(Math.random() * 5000))
     }, []);
 
+    const sendMessage = (e) => {
+
+    }
+    
     return(
         <div className="chat">
             <div className="chat__header">
@@ -45,7 +51,12 @@ function Chat() {
                 </p>
             </div>
             <div className="chat__footer">
-
+                <InsertEmoticonIcon />
+                <form>
+                    <input type="text" placeholder="Type a message" />
+                    <button type="submit" onClick={sendMessage}>Send</button>
+                </form>
+                <MicIcon />
             </div>
         </div>
     )
